@@ -6,7 +6,7 @@ C'est dans l'ensemble du bon travail.
 #
 ## Quelques remarques
 
-Bien que la correction ne le montre pas en effet, c'est une approche intéressante d'avoir rajouté controller pour card avec une vue. En effet si l'application venait à être upgrade il serait aisé d'utiliser les cartes ailleurs. Néanmoins le fichier devrait s'appeller **cardController** et non **cards**,car tu ne contrôle qu'une carte. 
+Bien que la correction ne le montre pas en effet, c'est une approche intéressante d'avoir rajouté controller pour card avec une vue. En effet, si l'application venait à être upgrade il serait aisé d'utiliser les cartes ailleurs. Néanmoins le fichier doit s'appeller **cardController** et non **cards**, car tu ne contrôle qu'une carte. (Attention au nommage)
 
 Tu vérifies que la carte n'est pas déjà dans le deck, cependant tu **oublies** la limite de 5 cartes. Et on ne peut pas supprimer de carte. 
 

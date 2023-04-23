@@ -4,11 +4,11 @@ Je viens de prendre connaissance de ton mcd.
 
 Dans l'ensemble c'est bien, on peut accepter de voir les choses comme ça voici comment je lis ton MCD :
 
-- Un utilisateur a 0 ou N adresses et une adresse a un seul utilisateur. (**many to one**)
+- Un utilisateur a 0 ou N adresses et une adresse à un seul utilisateur. (**many to one**)
 
-- Un utilisateur génère 0 ou N commandes et une commande est généré par un utilisateur.  (**many to one**)
+- Un utilisateur génère 0 ou N commandes et une commande est générée par un utilisateur.  (**many to one**)
 
-- Une commande contient 1 ou N produit et un produit peut être contenu dans 0 ou N commandes (*many to many**)
+- Une commande contient 1 ou N produits et un produit peut être contenu dans 0 ou N commandes (*many to many**)
 
 - Un utilisateur aime 1 un produit et un produit est aimé par 1 utilisateur (**one to one**)
 
@@ -31,16 +31,16 @@ J'**impose** à ma **question** et à ma **reponse** qu'elles soient construites
 - TableA -> Liaison -> TableB
 
 > Un **utilisateur** (TableA) peut-il n'avoir jamais **aimer/like** (liaison) un **produit** (TableB) ? 
->>Oui, un **utilisateur**  (TableA) peut avoir **liker** (liaison) 0 produit (TableB).
+>>Oui, un **utilisateur**  (TableA) peut avoir **like** (liaison) 0 produit (TableB).
 
 >Un **utilisateur** peut-il avoir **aimer** plus d'un **produit** ? 
->> Oui un **utilisateur** peut avoir **liker** N **produits**.
+>> Oui un **utilisateur** peut avoir **like** N **produits**.
 
-> Un **produit** peut il être **aimé** par 0 **utilisateurs** ? 
+> Un **produit** peut il être **aimé** par 0 **utilisateur** ? 
 >> Oui un **produit** peut être **aimé** par 0 **utilisateur**.
 
 > Un **produit** peut il être **aimé** par plus d'un **utilisateur** ?
->> Oui un **produit** peut être **aimé** par N **utilisateur**.
+>> Oui un **produit** peut être **aimé** par N **utilisateurs**.
 
 
 Par ailleurs, je trouve que ton mcd est difficile à lire (notamment pour les cardinalitsé). Tu peux utiliser les outils suivants :

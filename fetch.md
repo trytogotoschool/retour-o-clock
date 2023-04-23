@@ -18,18 +18,18 @@ Dans ton métier tu seras régulièrement amené à **interroger des API**, (mai
 Le fait de pouvoir aussi bien reçevoir des données ainsi que d'en envoyer te permet par exemple de **gérer l'authentification** d'un utilisateur et d'afficher le contenu sur ta page en conséquence.
 
 
-Un fetch est généralement une requête effectué de manière invisible pour un utilisateur, donc ce sont généralement des données brutes (du texte/json) afin de pouvoir les traiter à notre guise (mise en forme / stats...). 
+Un fetch est généralement une requête effectuée de manière invisible pour un utilisateur, et ce sont (généralement) des données brutes (du texte/json) afin de pouvoir les traiter à notre guise (mise en forme...). 
 
 
-Un autre point important fetch te permet d'ajouter des options, comme le type de requête (get/post/put...) (verb http) ainsi qu'évidemment headers, cookies... Néanmoins côté client fetch ignore (sauf options, mais mauvaise pratique) les cookies envoyer par le serveur. Généralement lorsqu'on authentifie un utilisateur via une api, celle-ci renvoie un token d'identification, celui-ci devra être ajouté à tes options dans les headers par exemple afin que tu sois authenfier lorsque tu fais une requête.
+Un autre point important fetch te permet d'ajouter des options, comme le type de requête (get/post/put...) (verb http) ainsi qu'évidemment headers, cookies... Néanmoins côté client fetch ignore les cookies envoyer par le serveur (sauf options, mais mauvaise pratique). Par exemple, lorsqu'on authentifie un utilisateur via une api, celle-ci renvoie un token d'identification, celui-ci devra être ajouté aux options dans les headers afin que l'utilisateur soit authentifier lors d'une requête.
 
-Ce dernier point, ce très important lorsque tu commenceras à être à l'aise avec cette méthode.
+Ce dernier point, est très important et te sera essentiel, lorsque tu commenceras à être à l'aise avec cette méthode.
 
 ## Alors comment on fait ? 
 
 Notre application n'intégre pas d'API, néanmoins **nous pouvons récupérer une page complète** (code html).
 
-Notre but est simple nous allons créer **notre propre page HTML, avec notre  propre code js**. (ceci est complètement indépendant l'application que tu viens de créer). Notre page contiendra un bouton nommé "afficher la carte", et un input de type number. Nous effectuerons une requête avec fetch sur la route "/card/id" l'id étant le contenu de l'input, enfin nous afficherons les informations de la carte. 
+Notre but est simple nous allons créer **notre propre page HTML, avec notre  propre code js**. (ceci est complètement indépendant l'application que tu viens de créer, bien qu'il faudra qu'elle soit démarrée). Notre page contiendra un bouton nommé "afficher la carte", et un input de type number. Nous effectuerons une requête avec fetch sur la route "/card/id" l'id étant le contenu de l'input, enfin nous afficherons les informations de la carte. 
 
 #
 Un petit pré-requis nécéssaire afin de ne pas être bloqué par ton navigateur. Je t'invite à installer le package "cors" via npm et de modifier ton index.js comme ci après :
@@ -38,7 +38,7 @@ const cors = require('cors')
 app.use(cors())
 ````
 
-> Afin que tu ne mélange pas les notions, je ne m'attarderai pas sur ce qu'est le cors, mais grossièrement dans notre cas ce package permet d'envoyer un header en particulier afin que la requête ne soit pas bloqué par ton navigateur.
+> Afin que tu ne mélange pas les notions, je ne m'attarderai pas sur ce qu'est le cors, mais grossièrement dans notre cas ce package permet d'envoyer un header en particulier afin que la requête ne soit pas bloquée par ton navigateur.
 #
 Voici le code que je te propose les explications sont en commentaires dans le code :
 ```html
