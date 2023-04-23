@@ -1,11 +1,9 @@
 # Feedback Triple Triad
 
 Salut Jean,
-
 C'est très bien tout fonctionne. Mais je vais t'embêter un peu.
 
 # 
-
 ## En ce qui concernerne ton code : 
 
 - C'est une bonne pratique de découper le middleware dans un fichier séparé.
@@ -40,27 +38,4 @@ C'est une **très mauvaise** pratique. Il faut toujours garder le contrôle sur 
 Voici un exemple d'un résultat non attendu : 
 
 - <http://localhost:PORT/search/values?direction=east%20=%201%20or%20value_north&value=1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Je t'invite à regarder la correction afin de faire les requêtes correctement.
